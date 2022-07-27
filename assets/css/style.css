@@ -1,0 +1,375 @@
+/* reset css */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ============================================================================= */
+
+
+:root {
+    --background-color: rgb(187 226 254);
+
+    --h1-font-size: 3.125rem;
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 1.875rem;
+    --h4-font-size: 1.563rem;
+    --h5-font-size: 1.25rem;
+    --h6-font-size: 0.938rem;
+
+    --p-font-size: 1.563rem;
+
+    --li-font-size: 1.563rem;
+
+    --font-family: Arial, Helvetica, sans-serif;
+
+    --a-color: blue;
+    --a-color-hover: purple;
+
+    --header-background-color: #333;
+    --header-height: 3.125rem;
+
+    --nav-item-font-size: 1.25rem;
+    --nav-item-dropdown-background-color: #fff;
+    --nav-item-dropdown-color: #000;
+    --nav-item-dropdown-font-size: 0.938rem;
+    --nav-item-dropdown-height: 40px;
+}
+
+/* ================================================================================== */
+
+html {
+    background-color: var(--background-color);
+
+    font-family: var(--font-family);
+}
+
+p {
+    font-size: var(--p-font-size);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    font-size: var(--h6-font-size);
+}
+
+a {
+    color: var(--a-color);
+}
+
+a:hover {
+    color: var(--a-color-hover);
+}
+
+li { 
+    font-size: var(--li-font-size);
+}
+
+
+/* ======================================================================== */
+
+
+.header {
+    position: sticky;
+    top: 0;
+
+    background-color: var(--header-background-color);
+    width: 100%;
+    height: var(--header-height);
+
+    text-transform: capitalize;
+}
+
+
+
+/* .nav .nav-item {
+    margin: 0 10px;
+    line-height: var(--header-height);
+    color: #fff;
+    display: inline-block;
+    font-size: var(--nav-item-font-size);
+} */
+
+.nav .nav-item,
+.nav .nav-item .nav-link {
+    line-height: var(--header-height);
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--nav-item-font-size);
+    padding: 0 5px;
+}
+
+.nav .nav-item:hover,
+.nav .nav-item:hover .nav-link {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+.nav .nav-item-dropdown,
+.nav .nav-item-dropdown .nav-link {
+    line-height: var(--header-height);
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--nav-item-font-size);
+    position: relative;
+    padding: 0 5px;
+}
+
+.nav .nav-item-dropdown .nav-item-dropdown-content {
+    display: none;
+    width: 250px;
+    position: absolute;
+    background-color: var(--nav-item-dropdown-background-color);
+    color: var(--nav-item-dropdown-color);
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav .nav-item-dropdown:hover .nav-link {
+    background-color: #ccc;
+    color: #000;
+}
+
+.nav .nav-item-dropdown .nav-item-dropdown-content a {
+    color: black;
+    /* padding: 5px 10px; */
+    text-decoration: none;
+    display: block;
+    padding: 0 5px;
+    font-size: var(--nav-item-dropdown-font-size);
+
+    height: var(--nav-item-dropdown-height);
+    line-height: var(--nav-item-dropdown-height);
+}
+
+.nav .nav-item-dropdown:hover .nav-item-dropdown-content {
+    display: block;
+}
+
+.nav .nav-item-dropdown .nav-item-dropdown-content a:hover {
+    display: block;
+    background-color: #6AFFFE;
+    color: #000;
+}
+
+
+
+/* ======================================================================== */
+
+
+.height-test {
+    height: 100000px;
+}
+
+.between {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.width-1000px {
+    width: 62.5rem;
+    max-width: 100%;
+    /* width: 700px; */
+    /* background-color: #ccc; */
+}
+
+.width-700px {
+    width: 43.75rem;
+    max-width: 100%;
+    /* width: 700px; */
+    /* background-color: #ccc; */
+}
+
+.width-300px {
+    width: 18.75rem;
+    max-width: 100%;
+    /* width: 700px; */
+    /* background-color: #ccc; */
+}
+
+.width-200px {
+    width: 12.5rem;
+    max-width: 100%;
+}
+
+.btn-1 {
+    /* background-color: rgb(187 226 254); */
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 30px;
+    border-color:#fff;
+}
+.btn-1:hover {
+    background-color: rgb(187 226 254);
+    border-color: #fff;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.d-block {
+    display: block;
+}
+
+.margin-10px {
+    margin: 10px;
+}
+
+.margin-10px-between {
+    margin: 10px auto;
+}
