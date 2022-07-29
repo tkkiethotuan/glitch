@@ -1,10 +1,12 @@
-function mobile_users() {
-    alert("We are creating the version for mobile please wait.")
-}
-
-function pc_users() {
+function welcome() 
+{
     alert("Welcome")
     window.location.replace("/home/")
+}
+
+function exit() 
+{
+    window.location.replace("https://google.com")
 }
 
 // log 
