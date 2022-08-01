@@ -407,6 +407,11 @@ li {
     /* background-color: #ccc; */
 }
 
+.width-500px {
+    width: 500px;
+    max-width: 100%;
+}
+
 .width-300px {
     width: 18.75rem;
     max-width: 100%;
@@ -457,7 +462,7 @@ li {
 }
 
 .img-zoom-1 {
-   transition: transform linear 0.2s;
+    transition: transform linear 0.2s;
 }
 .img-zoom-1:hover {
     transform: scale(1.05);
@@ -505,4 +510,4 @@ li {
 }
 
 
-/* end code */
+/* End of code */
