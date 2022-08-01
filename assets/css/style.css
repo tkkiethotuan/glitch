@@ -457,7 +457,6 @@ li {
 }
 
 .img-zoom-1 {
-   transform: scale(1);
    transition: transform linear 0.2s;
 }
 .img-zoom-1:hover {
