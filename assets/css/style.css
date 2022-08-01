@@ -456,9 +456,12 @@ li {
     margin: 10px auto;
 }
 
+.img-zoom-1 {
+   transform: scale(1);
+   transition: transform linear 0.2s;
+}
 .img-zoom-1:hover {
     transform: scale(1.05);
-    transition: transform linear 0.2s;
 }
 
 .img-flexbox {
